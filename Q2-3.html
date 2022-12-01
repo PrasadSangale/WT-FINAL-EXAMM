@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+let today = new Date();
+//console.log(today);
+let new_year = today.getFullYear();
+//console.log(new_year);
+if (today.getMonth() == 11 && today.getDate() > 25){
+    new_year = new_year + 1;
+}
+let new_year_date = new Date(new_year, 11, 25);
+//console.log(new_year_date);
+let dayMilliseconds = 1000 * 60 * 60 * 24;
+let remainingDays = Math.ceil((new_year_date.getTime() - today.getTime()) / (dayMilliseconds));
+
+document.write("There are " + remainingDays + " days remaining until next NewYear 2023.");
+</script>
